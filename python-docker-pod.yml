@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: python-docker
+  name: python-docker
+  namespace: rchk-test-rchk-dev
+spec:
+  containers:
+    - image: registry-jpe2.r-local.net/rchk-test-rchk-dev/python-docker:v0.0.3
+      name: python-docker
+      ports:
+        - containerPort: 5000
+  imagePullSecrets:
+    - name: harbor-bot
