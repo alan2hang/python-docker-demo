@@ -8,7 +8,7 @@ metadata:
   namespace: rchk-test-rchk-dev
 spec:
   containers:
-    - image: registry-jpe2.r-local.net/rchk-test-rchk-dev/python-docker:v0.0.3
+    - image: registry-jpe2.r-local.net/rchk-test-rchk-dev/python-docker:v0.0.4
       name: python-docker
       ports:
         - containerPort: 5000

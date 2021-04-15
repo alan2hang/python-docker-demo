@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: python-docker
+  name: python-docker
+  namespace: rchk-test-rchk-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-docker
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: python-docker
+    spec:
+      containers:
+      - image: registry-jpe2.r-local.net/rchk-test-rchk-dev/python-docker:v0.0.4
+        name: python-docker
+        ports:
+          - containerPort: 5000
+      imagePullSecrets:
+        - name: harbor-bot
